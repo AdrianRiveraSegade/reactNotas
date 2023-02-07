@@ -7,6 +7,8 @@ import Registro from "./pages/Register";
 import Login from "./pages/Login";
 import NuevaNota from "./pages/NuevaNota";
 import Config from "./pages/Config";
+import ListadoNotas from "./pages/ListadoNotas";
+import VerNotas from "./pages/VerNotas";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/notas" element={<NuevaNota />} />
         <Route path="/config" element={<Config />} />
+        <Route path="/list" element={<ListadoNotas />} />
+        <Route path="/notas/:id" element={<VerNotas />} />
       </Routes>
 
       <Footer />
