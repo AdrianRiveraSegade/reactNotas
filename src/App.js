@@ -9,6 +9,7 @@ import NuevaNota from "./pages/NuevaNota";
 import Config from "./pages/Config";
 import ListadoNotas from "./pages/ListadoNotas";
 import VerNotas from "./pages/VerNotas";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/config" element={<Config />} />
         <Route path="/list" element={<ListadoNotas />} />
         <Route path="/notas/:id" element={<VerNotas />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
       <Footer />

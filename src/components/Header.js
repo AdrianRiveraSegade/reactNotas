@@ -1,9 +1,12 @@
 import Auth from "./Auth";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
-      <h1> BlocOnline</h1>
+      <h1>
+        <Link to={"/"}>BlocOnline</Link>
+      </h1>
 
       <nav>
         <Auth />
