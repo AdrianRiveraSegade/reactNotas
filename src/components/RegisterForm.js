@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const RegisterForm = () => {
   //Colocamos aquí los estados para los datos del formulario
-  //const [username, setUsername] = useState("");
+  const [nickname, setNickname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -22,7 +22,7 @@ const RegisterForm = () => {
           const res = await fetch("http://localhost:4000/user", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, password }),
+            body: JSON.stringify({ nickname, email, password }),
           });
 
           //Accedemos al body de la respuesta
@@ -39,6 +39,16 @@ const RegisterForm = () => {
         }
       }}
     >
+      <label htmlFor="nickname">Nombre de usuario</label>
+      <input
+        id="nickname"
+        type="nickname"
+        value={nickname}
+        onChange={(event) => {
+          setNickname(event.target.value);
+        }}
+        placeholder="Paco"
+      />
       <label htmlFor="email">Correo electronico</label>
       <input
         id="email"
