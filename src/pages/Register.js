@@ -1,14 +1,15 @@
 import { Navigate } from "react-router-dom";
-//import { useTokenContext } from "../../contexts/TokenContext";
+import { useTokenContext } from "../context/TokenContext";
 import RegisterForm from "../components/RegisterForm";
 
 const Register = () => {
-  /* const {token} = useTokenContext();
+  const { token } = useTokenContext();
 
   //Si el user esta logueado volvemos al inicio
   if (token) {
-    return <Navigate to="/" />
-  }*/
+    return <Navigate to="/" />;
+  }
+
   return (
     <section>
       <h2>Registro</h2>
