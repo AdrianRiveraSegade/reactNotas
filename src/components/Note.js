@@ -2,7 +2,7 @@ import NotePhoto from "./NotePhotos";
 import { useTokenContext } from "../context/TokenContext";
 import { useState } from "react";
 
-const Entry = ({ id, user_id, text, image, category_id, created_at }) => {
+const Note = ({ id, user_id, text, image, category_id, created_at }) => {
   const { token, loggedUser } = useTokenContext();
   const [showModal, setShowModal] = useState(false);
 
@@ -25,4 +25,4 @@ const Entry = ({ id, user_id, text, image, category_id, created_at }) => {
   );
 };
 
-export default Entry;
+export default Note;

@@ -28,7 +28,7 @@ export const TokenContextProvider = ({ children }) => {
         const tokenPayLoad = JSON.parse(atob(tokenEncryptedPayload));
 
         const res = await fetch(
-          "http://localhost:4000/users/${tokenPayLoad.id}",
+          `http://localhost:4000/users/${tokenPayLoad.id}`,
           {
             headers: { Authorization: token },
           }
