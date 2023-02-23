@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<Registro />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/notas" element={<NuevaNota />} />
+        <Route path="/note" element={<NuevaNota />} />
         <Route path="/config" element={<Config />} />
         <Route path="/list" element={<ListadoNotas />} />
         <Route path="/notas/:id" element={<VerNotas />} />
