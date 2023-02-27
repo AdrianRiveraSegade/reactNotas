@@ -1,5 +1,5 @@
 import { useState } from "react";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 //import { toast } from "react-toastify";
 
 const RegisterForm = () => {
@@ -9,7 +9,7 @@ const RegisterForm = () => {
   const [password, setPassword] = useState("");
 
   //Usamos useNavigate para redirideccionar al usuario
-  //const navigate= useNavigate();
+  const navigate = useNavigate();
 
   return (
     <form
@@ -32,6 +32,9 @@ const RegisterForm = () => {
           if (!res.ok) {
             throw new Error(body.message);
           }
+
+          //Devolvemos al usuario a la pagina principal
+          navigate("/");
         } catch (error) {
           //Si hay algún error lo sacamos por consola y lo mostramos como alerta al usuario
           console.error(error);

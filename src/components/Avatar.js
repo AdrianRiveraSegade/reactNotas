@@ -4,8 +4,8 @@ import defaultAvatar from "../assets/defaultAvatar.jpg";
 const Avatar = ({ avatar, username }) => {
   return (
     <img
-      src={avatar ? "http://localhost:4000/${avatar}" : defaultAvatar}
-      alt={"${username} avatar"}
+      src={avatar ? `http://localhost:4000/${avatar}` : defaultAvatar}
+      alt={`${username} avatar`}
     />
   );
 };

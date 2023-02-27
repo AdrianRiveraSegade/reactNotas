@@ -22,7 +22,7 @@ function App() {
         <Route path="/note" element={<NuevaNota />} />
         <Route path="/config" element={<Config />} />
         <Route path="/list" element={<ListadoNotas />} />
-        <Route path="/notas/:id" element={<VerNotas />} />
+        <Route path="/note/:id" element={<VerNotas />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
 

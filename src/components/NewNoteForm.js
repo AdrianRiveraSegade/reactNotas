@@ -8,7 +8,6 @@ const NewNoteForm = () => {
   //Estados para controlar los inputs del formulario
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
-  const [category, setCategory] = useState("");
 
   //State para almacenar un posile error  mostrarlo por pantalla
   const [errorMessage, setErrorMessage] = useState("");
@@ -40,7 +39,6 @@ const NewNoteForm = () => {
             //Metemos en el formData los datos introducidos por el usuario
             formData.set("title", title);
             formData.set("text", text);
-            formData.set("category", category);
 
             //Si ha subido una imagen hacemos un bucle que la aade al formData
             if (images.length) {
@@ -91,16 +89,6 @@ const NewNoteForm = () => {
           value={text}
           onChange={(event) => {
             setText(event.target.value);
-          }}
-        />
-
-        <label htmlFor="category">Categoria</label>
-        <input
-          id="category"
-          required
-          value={category}
-          onChange={(event) => {
-            setCategory(event.target.value);
           }}
         />
 

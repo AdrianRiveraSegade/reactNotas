@@ -46,7 +46,7 @@ const useNotes = () => {
     };
 
     fetchNotes();
-  }, [setSearchParams]);
+  }, [searchParams]);
 
   return {
     notes,

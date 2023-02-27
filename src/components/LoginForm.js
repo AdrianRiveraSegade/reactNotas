@@ -24,7 +24,7 @@ const LoginForm = () => {
           //Hacemos una peticion POST a la API  enviamos en body un JSON con los datos para el login
           const res = await fetch("http:localhost:4000/login", {
             method: "POST",
-            headers: { "Content-Type": "application/son" },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password }),
           });
 
