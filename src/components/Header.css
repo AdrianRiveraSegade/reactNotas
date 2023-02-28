@@ -17,14 +17,15 @@
 
 /* Porque no funciona el cambio de color?? HALP */
 
-header .head {
+header {
   position: fixed;
   width: 100%;
   content: "";
   display: block;
   position: absolute;
   left: 0;
-  bottom: 4em;
+  top: 4em;
   z-index: -1;
   background-color: beige;
+  border: 2px solid black;
 }
