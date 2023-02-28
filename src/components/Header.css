@@ -1,0 +1,30 @@
+/* header {
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left; */
+/* height: 60px;
+  padding: 16px;
+  position: fixed;
+  border: 5px solid black; /* esto es temporal para tener feedback visual
+}*/
+
+/*.cabecera {
+  color: black;
+  display: flex;
+  justify-content: space-between; 
+}
+
+/* Porque no funciona el cambio de color?? HALP */
+
+header .head {
+  position: fixed;
+  width: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 4em;
+  z-index: -1;
+  background-color: beige;
+}
