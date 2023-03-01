@@ -8,12 +8,6 @@ export const Auth = () => {
 
   return (
     <ul className="headLeft">
-      <li>
-        <Link to={"/register"}>Register</Link>
-      </li>
-      <li>
-        <Link to={"/login"}>Login</Link>
-      </li>
       {!token ? (
         <>
           <li>
@@ -24,8 +18,20 @@ export const Auth = () => {
           </li>
         </>
       ) : (
-        <li onClick={() => logout()}>Logout</li>
+        <>
+          <li>
+            <button>
+              <Link to={"/note"}>Crea una nueva nota</Link>
+            </button>
+          </li>
+          <li onClick={() => logout()}>
+            <button>Logout</button>
+          </li>
+        </>
       )}
+      <button>
+        <Link to={"/config"}>Configuracion</Link>
+      </button>
     </ul>
   );
 };
