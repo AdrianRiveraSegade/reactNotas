@@ -1,3 +1,4 @@
+import "./Login.css";
 import { Navigate } from "react-router-dom";
 import { useTokenContext } from "../context/TokenContext";
 import RegisterForm from "../components/RegisterForm";
