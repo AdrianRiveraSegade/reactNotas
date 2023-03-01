@@ -1,4 +1,5 @@
 import "./HomePage.css";
+
 const HomePage = () => {
   return (
     <section className="HomePage">

@@ -3,12 +3,12 @@ import { useTokenContext } from "../context/TokenContext";
 import { Navigate } from "react-router-dom";
 
 const NuevaNotaPage = () => {
-  const { token } = useTokenContext();
+  // const { token } = useTokenContext();
 
   //Si no hay token devolvemos a login
-  if (!token) {
+  /* if (!token) {
     return <Navigate to="/login" />;
-  }
+  }*/
 
   return (
     <section>

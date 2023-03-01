@@ -1,60 +1,60 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import useLocalStorage from "../hooks/useLocalStorage";
 
 //Creamos un contexto para hacer el token accesible a cualquier componente.
 export const TokenContext = createContext();
 
 //Componente que crea un estado para el token
 export const TokenContextProvider = ({ children }) => {
-  const [token, setToken] = useLocalStorage("token", "");
-  const [loggedUser, setLoggedUser] = useState({});
+  const [token, setToken] = useState(localStorage.getItem("token"));
+  const [loggedUser, setLoggedUser] = useState(null);
 
-  const navigate = useNavigate();
-
-  //useEffect que se ejecuta cada vez que el token cambia
+  // Obtenemos los datos del usuario si hay token de manera automatica.
   useEffect(() => {
-    //Si el token no existe, cambiamos loggedUser a un object vacío y cortamos la funcion
-    if (!token) {
-      setLoggedUser({});
-      return;
-    }
-
-    //Si el token existe recogemos la información del usuario y metemos los datos en loggedUser
     const fetchUserProfile = async () => {
       try {
-        const tokenEncryptedPayload = token.split(".")[1];
-
-        const tokenPayLoad = JSON.parse(atob(tokenEncryptedPayload));
-
-        const res = await fetch(
-          `http://localhost:4000/users/${tokenPayLoad.id}`,
-          {
-            headers: { Authorization: token },
-          }
-        );
+        const res = await fetch(`http://localhost:4000/user`, {
+          headers: { Authorization: token },
+        });
 
         const body = await res.json();
 
         if (!res.ok) {
           throw new Error(body.message);
+        } else {
+          setLoggedUser(body.data);
         }
-
-        setLoggedUser({ ...body.data.user, id: tokenPayLoad.id });
       } catch (error) {
-        //Si hubiese un error al loguear devolvemos al user al login
+        // Si hubiese un error al loguear devolvemos al user al login.
         console.error(error);
         setToken("");
-        navigate("/login");
       }
     };
 
-    fetchUserProfile();
-  }, [token, navigate, setToken]);
+    // Si hay tpken buscamos los datos del usuario.
+    if (token) fetchUserProfile();
+  }, [token]);
+
+  // Funcion de login.
+  const login = (newToken) => {
+    // Guardamos el token en el localStorage.
+    localStorage.setItem("token", newToken);
+
+    // Guardamos el token en la constante.
+    setToken(newToken);
+  };
+
+  // Funcion de logout.
+  const logout = () => {
+    // Eliminamos el token en el localStorage.
+    localStorage.removeItem("token");
+
+    // Establecemos el token de la constante a null.
+    setToken(null);
+  };
 
   return (
     <TokenContext.Provider
-      value={{ token, setToken, loggedUser, setLoggedUser }}
+      value={{ token, login, logout, loggedUser, setLoggedUser }}
     >
       {children}
     </TokenContext.Provider>
