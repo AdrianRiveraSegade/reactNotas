@@ -35,3 +35,5 @@ export const Auth = () => {
     </ul>
   );
 };
+
+export default Auth;
