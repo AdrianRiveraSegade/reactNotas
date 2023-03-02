@@ -2,22 +2,33 @@ import NotePhoto from "./NotePhotos";
 import getTimeAgo from "../utils/getTimeAgo";
 
 const Note = ({ id, user_id, text, image, title, created_at }) => {
+  const deleteNote = async (id) => {
+    return false;
+  };
+
+  // if (id) console.log(id, user_id, text, image, title, created_at);
+
   return (
     <article className="entry">
-      <header>
-        <h3>[title]</h3>
-      </header>
+      {id && (
+        <>
+          <header>
+            <h3>{title || "Sin titulo"}</h3>
+          </header>
 
-      <p>{text}</p>
+          <p>{text}</p>
 
-      {image?.length > 0 && <NotePhoto photos={image} title={title} />}
+          {image && <NotePhoto photos={image} title={title} />}
 
-      <footer>
-        <p className="noteDateAuthor">
-          Publicado por <span>usuario {user_id}</span>
-          {getTimeAgo(new Date(created_at))}
-        </p>
-      </footer>
+          <footer>
+            <p className="noteDateAuthor">
+              Publicado por <span>usuario {user_id}</span>
+              {getTimeAgo(new Date(created_at))}
+            </p>
+            <button onClick={() => deleteNote(id)}>Borrar nota</button>
+          </footer>
+        </>
+      )}
     </article>
   );
 };

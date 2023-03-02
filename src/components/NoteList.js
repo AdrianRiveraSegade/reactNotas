@@ -4,7 +4,7 @@ import Note from "./Note";
 const NoteList = ({ notes }) => {
   return (
     <ul className="noteList">
-      {notes.map((note) => {
+      {notes?.map((note) => {
         const { id, user_id, text, created_at, title } = note;
 
         return (

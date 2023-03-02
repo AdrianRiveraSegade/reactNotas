@@ -1,4 +1,4 @@
-* {
+.HomePage {
   background: url(/public/fondo.jpg) no-repeat center fixed;
   background-size: cover;
 }

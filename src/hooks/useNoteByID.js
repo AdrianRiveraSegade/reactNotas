@@ -22,7 +22,7 @@ const useNoteById = (id) => {
           throw new Error(body.message);
         }
 
-        setNote(body.data.note);
+        setNote(body.data);
       } catch (error) {
         console.error(error);
         setErrorMessage(error.message);
@@ -30,10 +30,11 @@ const useNoteById = (id) => {
         setLoading(false);
       }
     };
-    fetchNoteById();
-  }, [id]);
 
-  return { note, loading, errorMessage };
+    fetchNoteById();
+  }, [token, id]);
+
+  return { note, setNote, loading, errorMessage };
 };
 
 export default useNoteById;

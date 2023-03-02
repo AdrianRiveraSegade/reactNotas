@@ -56,7 +56,7 @@ const NewNoteForm = () => {
               throw new Error(body.message);
             } else {
               //Redireccionamos al usuario a la pagina principal
-              navigate("/");
+              navigate("/list");
             }
           } catch (error) {
             console.error(error);

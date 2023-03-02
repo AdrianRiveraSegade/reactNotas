@@ -6,6 +6,7 @@ import SearchForm from "../components/SearchForm";
 const ListadoNotas = () => {
   const { notes, errorMessage, loading, searchParams, setSearchParams } =
     useNotes();
+
   return (
     <section>
       <SearchForm
@@ -18,7 +19,7 @@ const ListadoNotas = () => {
       {loading}
       {errorMessage && <ErrorMessage msg={errorMessage} />}
 
-      {notes.length > 0 && <NoteList notes={notes} />}
+      {notes?.length > 0 && <NoteList notes={notes} />}
     </section>
   );
 };

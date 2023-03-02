@@ -56,26 +56,30 @@ const LoginForm = () => {
 
   return (
     <form className="loginForm" onSubmit={handleLogin}>
-      <label htmlFor="email">Email</label>
-      <input
-        id="email"
-        type="email"
-        value={email}
-        onChange={(event) => {
-          setEmail(event.target.value);
-        }}
-        placeholder="mail@gmail.com"
-      />
-      <label htmlFor="password">Password</label>
-      <input
-        id="password"
-        type="password"
-        value={password}
-        onChange={(event) => {
-          setPassword(event.target.value);
-        }}
-        placeholder="******"
-      />
+      <div>
+        <label htmlFor="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          value={email}
+          onChange={(event) => {
+            setEmail(event.target.value);
+          }}
+          placeholder="mail@gmail.com"
+        />
+      </div>
+      <div>
+        <label htmlFor="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          value={password}
+          onChange={(event) => {
+            setPassword(event.target.value);
+          }}
+          placeholder="******"
+        />
+      </div>
 
       <button disabled={loading}>Login</button>
     </form>

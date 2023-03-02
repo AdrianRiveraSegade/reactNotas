@@ -5,9 +5,9 @@ import { useSearchParams } from "react-router-dom";
 //este hook carga las notas de la API y devuelve las notas en un objeto
 const useNotes = () => {
   const [notes, setNotes] = useState([]);
+  const [searchParams, setSearchParams] = useSearchParams();
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const [searchParams, setSearchParams] = useSearchParams();
 
   const { token } = useTokenContext();
 
@@ -35,7 +35,7 @@ const useNotes = () => {
         }
 
         //Cargamos los datos de las notas en el estado notas
-        setNotes(body.data.notes);
+        setNotes(body.data);
       } catch (error) {
         //Si salta algun error metemos el mensaje de errorMessage
         setErrorMessage(error.message);
@@ -45,8 +45,8 @@ const useNotes = () => {
       }
     };
 
-    fetchNotes();
-  }, [searchParams]);
+    if (token) fetchNotes();
+  }, [token, searchParams]);
 
   return {
     notes,
