@@ -12,5 +12,6 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin-top: 33%;
+  margin: 9%;
+  padding: 9%;
 }

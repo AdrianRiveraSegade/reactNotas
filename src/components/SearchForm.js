@@ -1,3 +1,4 @@
+import "./Form.css";
 import { useState } from "react";
 
 const SearchForm = ({ searchParams, setSearchParams }) => {
@@ -13,6 +14,7 @@ const SearchForm = ({ searchParams, setSearchParams }) => {
     >
       <label htmlFor="search">Busqueda</label>
       <input
+        className="search"
         id="search"
         value={search}
         onChange={(event) => {
@@ -20,7 +22,7 @@ const SearchForm = ({ searchParams, setSearchParams }) => {
         }}
       />
 
-      <button>Buscar</button>
+      <button className="searchButton">Buscar</button>
     </form>
   );
 };

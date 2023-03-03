@@ -11,10 +11,14 @@ export const Auth = () => {
       {!token ? (
         <>
           <li>
-            <Link to={"/register"}>Register</Link>
+            <button className="register">
+              <Link to={"/register"}>Register</Link>
+            </button>
           </li>
           <li>
-            <Link to={"/login"}>Login</Link>
+            <button className="login">
+              <Link to={"/login"}>Login</Link>
+            </button>
           </li>
         </>
       ) : (
@@ -34,7 +38,7 @@ export const Auth = () => {
           </li>
         </>
       )}
-      <button className="">
+      <button className="config">
         <Link to={"/config"}>Configuracion</Link>
       </button>
     </ul>

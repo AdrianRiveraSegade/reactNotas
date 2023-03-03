@@ -1,3 +1,4 @@
+import "./Form.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 //import { toast } from "react-toastify";
@@ -44,6 +45,7 @@ const RegisterForm = () => {
     >
       <label htmlFor="nickname">Nombre de usuario</label>
       <input
+        className="nickname"
         id="nickname"
         type="nickname"
         value={nickname}
@@ -54,6 +56,7 @@ const RegisterForm = () => {
       />
       <label htmlFor="email">Correo electronico</label>
       <input
+        className="email"
         id="email"
         type="email"
         value={email}
@@ -64,6 +67,7 @@ const RegisterForm = () => {
       />
       <label htmlFor="password">Contraseña</label>
       <input
+        className="password"
         id="password"
         type="password"
         value={password}
@@ -72,7 +76,7 @@ const RegisterForm = () => {
         }}
         placeholder="*******"
       />
-      <button>Registrarse</button>
+      <button className="registerButton">Registrarse</button>
     </form>
   );
 };

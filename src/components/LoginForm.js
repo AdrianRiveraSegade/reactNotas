@@ -1,3 +1,4 @@
+import "./Form.css";
 import { useState } from "react";
 import { useTokenContext } from "../context/TokenContext";
 import { Navigate, useNavigate } from "react-router-dom";
@@ -59,6 +60,7 @@ const LoginForm = () => {
       <div>
         <label htmlFor="email">Email</label>
         <input
+          className="email"
           id="email"
           type="email"
           value={email}
@@ -71,6 +73,7 @@ const LoginForm = () => {
       <div>
         <label htmlFor="password">Password</label>
         <input
+          className="password"
           id="password"
           type="password"
           value={password}
@@ -81,7 +84,9 @@ const LoginForm = () => {
         />
       </div>
 
-      <button disabled={loading}>Login</button>
+      <button className="loginButton" disabled={loading}>
+        Login
+      </button>
     </form>
   );
 };

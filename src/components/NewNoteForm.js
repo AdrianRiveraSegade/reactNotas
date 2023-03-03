@@ -1,3 +1,4 @@
+import "./NewNoteForm.css";
 import { useState } from "react";
 import { useTokenContext } from "../context/TokenContext";
 import { Navigate, useNavigate } from "react-router-dom";
@@ -66,6 +67,7 @@ const NewNoteForm = () => {
       >
         <label htmlFor="title">Titulo</label>
         <input
+          className="newtitle"
           id="title"
           required
           value={title}
@@ -74,6 +76,7 @@ const NewNoteForm = () => {
 
         <label htmlFor="text">Text</label>
         <input
+          className="newtext"
           id="text"
           required
           value={text}
@@ -83,8 +86,12 @@ const NewNoteForm = () => {
         />
 
         <label htmlFor="images">
-          Sube imagenes:
-          <img src={uploadIcon} alt="subir imagen para la nota" />
+          <p className="subeImg">Sube imagenes:</p>
+          <img
+            className="img"
+            src={uploadIcon}
+            alt="subir imagen para la nota"
+          />
         </label>
         <input
           hidden
@@ -94,7 +101,7 @@ const NewNoteForm = () => {
           onChange={(e) => setImage(e.target.files[0])}
         />
 
-        <button>Publicar</button>
+        <button className="guardar">Guardar nota</button>
       </form>
 
       {errorMessage && <ErrorMessage msg={errorMessage} />}

@@ -1,3 +1,4 @@
+import "./NoteList.css";
 import { Link } from "react-router-dom";
 import Note from "./Note";
 
@@ -8,7 +9,7 @@ const NoteList = ({ notes }) => {
         const { id, user_id, text, created_at, title } = note;
 
         return (
-          <li key={id}>
+          <li className="lista" key={id}>
             <Link to={`/note/${id}`}>
               <Note
                 id={id}

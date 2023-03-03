@@ -1,0 +1,21 @@
+.nickname,
+.email,
+.password,
+.loginButton,
+.registerButton,
+.searchButton {
+  padding: 0.5rem;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px dotted black;
+}
+
+.search {
+  padding: 0.2rem;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+label {
+  margin: 5px;
+}

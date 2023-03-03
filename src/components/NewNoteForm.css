@@ -1,0 +1,17 @@
+.newtitle,
+.newtext,
+.guardar {
+  padding: 0.5rem;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px dotted black;
+}
+
+.img {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.subeImg {
+  text-align: left;
+}
