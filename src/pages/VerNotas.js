@@ -11,7 +11,7 @@ const VerNotas = () => {
   const { note, loading, errorMessage } = useNoteById(id);
 
   //Hacemos destructuring de note
-  const { user_id, title, text, created_at } = note;
+  const { user_id, title, text, image, created_at } = note;
   return (
     <section>
       <h2>Notes page</h2>
@@ -31,6 +31,7 @@ const VerNotas = () => {
           user_id={user_id}
           title={title}
           text={text}
+          image={image}
           created_at={created_at}
         />
       )}
