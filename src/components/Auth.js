@@ -24,6 +24,11 @@ export const Auth = () => {
               <Link to={"/note"}>Crea una nueva nota</Link>
             </button>
           </li>
+          <li>
+            <button className="nuevaNota">
+              <Link to={"/list"}>Listado de tus notas</Link>
+            </button>
+          </li>
           <li onClick={() => logout()}>
             <button className="logout">Logout</button>
           </li>

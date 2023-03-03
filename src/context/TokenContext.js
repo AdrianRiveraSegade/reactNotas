@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 //Creamos un contexto para hacer el token accesible a cualquier componente.
 export const TokenContext = createContext();
@@ -7,6 +8,8 @@ export const TokenContext = createContext();
 export const TokenContextProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [loggedUser, setLoggedUser] = useState(null);
+
+  const navigate = useNavigate();
 
   // Obtenemos los datos del usuario si hay token de manera automatica.
   useEffect(() => {
@@ -50,6 +53,8 @@ export const TokenContextProvider = ({ children }) => {
 
     // Establecemos el token de la constante a null.
     setToken(null);
+
+    navigate("/");
   };
 
   return (
