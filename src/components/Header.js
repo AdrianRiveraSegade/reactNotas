@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header>
       <h1 className="head">
-        <Link to={"/"} style={{ textDecoration: "none" }}>
+        <Link to={"/"} style={{ textDecoration: "none", color: "black" }}>
           BlocOnline
         </Link>
       </h1>

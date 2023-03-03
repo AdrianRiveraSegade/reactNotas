@@ -1,3 +1,4 @@
+import "./NuevaNota.css";
 import NewNoteForm from "../components/NewNoteForm";
 import { useTokenContext } from "../context/TokenContext";
 import { Navigate } from "react-router-dom";
