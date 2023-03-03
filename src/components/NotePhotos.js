@@ -1,10 +1,10 @@
-const NotePhoto = ({ photos, title }) => {
+/*const NotePhoto = ({ image, title }) => {
   return (
     <ul>
-      {photos.map((photo) => {
+      {image.map((image) => {
         return (
-          <li key={photo.id}>
-            <img src={"http://localhost:4000/${photo.name}"} alt={title} />
+          <li key={image.id}>
+            <img src={`http://localhost:4000/${image.name}`} alt={title} />
           </li>
         );
       })}
@@ -12,4 +12,4 @@ const NotePhoto = ({ photos, title }) => {
   );
 };
 
-export default NotePhoto;
+export default NotePhoto;*/

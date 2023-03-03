@@ -1,5 +1,5 @@
 import "./Note.css";
-import NotePhoto from "./NotePhotos";
+//import NotePhoto from "./NotePhotos";
 import getTimeAgo from "../utils/getTimeAgo";
 
 const Note = ({ id, user_id, text, image, title, created_at }) => {
@@ -19,7 +19,12 @@ const Note = ({ id, user_id, text, image, title, created_at }) => {
 
           <p>{text}</p>
 
-          {image && <NotePhoto photos={image} title={title} />}
+          {id.image ? (
+            <img
+              src={`${process.env.REACT_APP_BACKEND}/uploads/${id.image}`}
+              alt={Note.text}
+            />
+          ) : null}
 
           <footer>
             <p className="noteDateAuthor">
