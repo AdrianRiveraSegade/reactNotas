@@ -34,7 +34,7 @@ export const Auth = () => {
           </li>
         </>
       )}
-      <button className="config">
+      <button className="">
         <Link to={"/config"}>Configuracion</Link>
       </button>
     </ul>
