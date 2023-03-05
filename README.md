@@ -15,3 +15,5 @@ Esto es un proyecto para "https://www.hackaboss.com" y sigue siendo un proyecto 
 Muchas gracias por tu paciencia.
 
 NOTAS : - Sientete libre de usar este codigo como gustes, exploralo, cambialo e "inspirate" en el todo lo que quieras - Todas las cosas que estan en en la pagina web marcadas con un "WIP" significa "work in progress" que en español significa "trabajo en progreso", dicho de otra forma, no funciona porque aun no esta aplicado de todo o porque falla catastroficamente, estamos trabajando en ello.
+
+RECUERDA QUE TIENES QUE UTILIZAR EL COMANDO "npm install" PARA QUE TODO FUNCIONE CORRECTAMENTE.
