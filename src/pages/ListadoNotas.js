@@ -24,4 +24,6 @@ const ListadoNotas = () => {
   );
 };
 
+//PORQUE ENSEÑA TODAS?? NO LO ENTIENDO
+
 export default ListadoNotas;

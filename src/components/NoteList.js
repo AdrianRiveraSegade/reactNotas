@@ -26,4 +26,7 @@ const NoteList = ({ notes }) => {
   );
 };
 
+//Porque se muestran todas sin importar que usuario las este pidiendo?? Tenemos que implementar alguna clase de admin
+//con mas privilegios o esta mal el codigo en alguna parte?? Cuando david lo vio dijo que estaba bien...
+
 export default NoteList;

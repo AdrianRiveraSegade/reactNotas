@@ -19,4 +19,6 @@ const Register = () => {
   );
 };
 
+//Estaria bien crear una pagina de inicio especifica para los que ya estan logeados y que asi no vean la misma pagina que los que no.
+
 export default Register;

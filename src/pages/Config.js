@@ -9,4 +9,6 @@ const Config = () => {
   );
 };
 
+//A añadir : Foto de usuario, cambios en nombre, email y contraseña. Un modo oscuro.
+
 export default Config;

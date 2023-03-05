@@ -4,9 +4,7 @@ const HomePage = () => {
   return (
     <section className="HomePage">
       <h1> Tu bloc de notas de confianza</h1>
-      <p>
-        Unete a una gran comunidad de blogueros noteros hoy. Si quieres, vaya.
-      </p>
+      <p>Unete a una gran comunidad de blogueros noteros hoy.</p>
     </section>
   );
 };

@@ -1,7 +1,6 @@
 import "./Form.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-//import { toast } from "react-toastify";
 
 const RegisterForm = () => {
   //Colocamos aquí los estados para los datos del formulario
@@ -52,7 +51,7 @@ const RegisterForm = () => {
         onChange={(event) => {
           setNickname(event.target.value);
         }}
-        placeholder="Paco"
+        placeholder="Nombre de usuario"
       />
       <label htmlFor="email">Correo electronico</label>
       <input

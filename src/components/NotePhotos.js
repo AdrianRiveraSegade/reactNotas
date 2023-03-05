@@ -13,3 +13,5 @@
 };
 
 export default NotePhoto;*/
+
+// NO FUNCIONA Y NO ENTIENDO PORQUE!!!

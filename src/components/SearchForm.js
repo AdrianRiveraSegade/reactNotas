@@ -27,4 +27,7 @@ const SearchForm = ({ searchParams, setSearchParams }) => {
   );
 };
 
+//No se ni porque hemos puesto esto, por mí esto podia ser eliminado con un css en la lista de las notas, a fin de cuentas, nunca
+//va a haber suficientes notas en esta version de la pagia como para que existan problemas para localizar una nota concreta
+
 export default SearchForm;

@@ -11,3 +11,5 @@ const Avatar = ({ avatar, username }) => {
 };
 
 export default Avatar;
+
+//Esto no esta implementado aun

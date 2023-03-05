@@ -20,4 +20,6 @@ const NuevaNotaPage = () => {
   );
 };
 
+//Añadir en el css que el texto ocupe mas espacio en la pantalla, que sea mas comodo el ver el texto completo que se esta escribiendo
+
 export default NuevaNotaPage;

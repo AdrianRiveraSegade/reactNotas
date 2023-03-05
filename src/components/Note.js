@@ -1,13 +1,12 @@
 import "./Note.css";
 //import NotePhoto from "./NotePhotos";
+//Importamos el notePhoto, pero aunque lo "implementemos" no funciona, porque?
 import getTimeAgo from "../utils/getTimeAgo";
 
 const Note = ({ id, user_id, text, image, title, created_at }) => {
   const deleteNote = async (id) => {
     return false;
   };
-
-  // if (id) console.log(id, user_id, text, image, title, created_at);
 
   return (
     <article className="entry">

@@ -39,4 +39,6 @@ const VerNotas = () => {
   );
 };
 
+//No deberian de verse todas las notas de la api...
+
 export default VerNotas;

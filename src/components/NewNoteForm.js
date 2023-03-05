@@ -91,6 +91,7 @@ const NewNoteForm = () => {
             className="img"
             src={uploadIcon}
             alt="subir imagen para la nota"
+            //Se sube la imagen correctamente, pero porque no se muestra en la pantalla??
           />
         </label>
         <input
