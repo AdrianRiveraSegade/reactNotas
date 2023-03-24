@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import Note from "../components/Note";
+import { useTokenContext } from "../context/TokenContext";
 import ErrorMessage from "../components/ErrorMessage";
 import useNoteById from "../hooks/useNoteByID";
 import { useNavigate } from "react-router-dom";
@@ -8,13 +9,15 @@ const VerNotas = () => {
   //Recogemos el id de los params de la url
   const { id } = useParams();
 
+  const { token } = useTokenContext();
+
   const navigate = useNavigate();
 
   let deleteNote = async () => {
     await fetch(`http://localhost:4000/note/${id}`, {
       method: "DELETE",
-      headers: { "Content-Type": "application/json" },
-      //body: JSON.stringify({ nickname, email, password }),
+
+      headers: token ? { Authorization: token } : {},
     });
 
     navigate("/list");
