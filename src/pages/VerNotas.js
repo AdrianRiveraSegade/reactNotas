@@ -2,10 +2,23 @@ import { Link, useParams } from "react-router-dom";
 import Note from "../components/Note";
 import ErrorMessage from "../components/ErrorMessage";
 import useNoteById from "../hooks/useNoteByID";
+import { useNavigate } from "react-router-dom";
 
 const VerNotas = () => {
   //Recogemos el id de los params de la url
   const { id } = useParams();
+
+  const navigate = useNavigate();
+
+  let deleteNote = async () => {
+    await fetch(`http://localhost:4000/note/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      //body: JSON.stringify({ nickname, email, password }),
+    });
+
+    navigate("/list");
+  };
 
   //Llamamos a useNoteById y le pasamos el id de los params
   const { note, loading, errorMessage } = useNoteById(id);
@@ -35,6 +48,8 @@ const VerNotas = () => {
           created_at={created_at}
         />
       )}
+
+      <button onClick={() => deleteNote(id)}>Borrar nota WIP</button>
     </section>
   );
 };

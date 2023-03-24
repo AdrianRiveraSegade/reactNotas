@@ -4,10 +4,6 @@ import "./Note.css";
 import getTimeAgo from "../utils/getTimeAgo";
 
 const Note = ({ id, user_id, text, image, title, created_at }) => {
-  const deleteNote = async (id) => {
-    return false;
-  };
-
   return (
     <article className="entry">
       {id && (
@@ -30,7 +26,6 @@ const Note = ({ id, user_id, text, image, title, created_at }) => {
               Publicado por <span>usuario {user_id}</span>
               {getTimeAgo(new Date(created_at))}
             </p>
-            <button onClick={() => deleteNote(id)}>Borrar nota WIP</button>
           </footer>
         </>
       )}
