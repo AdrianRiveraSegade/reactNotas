@@ -14,7 +14,6 @@ const SearchForm = ({ searchParams, setSearchParams }) => {
     >
       <label htmlFor="search">Busqueda</label>
       <input
-        className="search"
         id="search"
         value={search}
         onChange={(event) => {
