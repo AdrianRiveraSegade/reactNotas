@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useTokenContext } from "../context/TokenContext";
 
 export const Auth = () => {
-  const { token, logout } = useTokenContext();
+  const { token, logout, loggedUser } = useTokenContext();
 
   return (
     <ul className="headLeft">
@@ -23,6 +23,8 @@ export const Auth = () => {
         </>
       ) : (
         <>
+          {/* FIXME Visualiza email de forma mas bonita y quitar Configuracion */}
+          {loggedUser && <li>{loggedUser.email}</li>}
           <li>
             <button className="nuevaNota">
               <Link to={"/note"}>Crea una nueva nota</Link>

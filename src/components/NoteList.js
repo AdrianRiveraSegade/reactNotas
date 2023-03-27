@@ -6,7 +6,7 @@ const NoteList = ({ notes }) => {
   return (
     <ul className="noteList">
       {notes?.map((note) => {
-        const { id, user_id, text, created_at, title } = note;
+        const { id, user_id, text, created_at, title, image } = note;
 
         return (
           <li className="lista" key={id}>
@@ -17,6 +17,7 @@ const NoteList = ({ notes }) => {
                 text={text}
                 created_at={created_at}
                 title={title}
+                image={image}
               />
             </Link>
           </li>

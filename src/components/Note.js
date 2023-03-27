@@ -14,18 +14,15 @@ const Note = ({ id, user_id, text, image, title, created_at }) => {
 
           <p>{text}</p>
 
-          {id.image ? (
+          {image ? (
             <img
-              src={`${process.env.REACT_APP_BACKEND}/uploads/${id.image}`}
+              src={`${process.env.REACT_APP_BACKEND}/${id.image}`}
               alt={Note.text}
             />
           ) : null}
 
           <footer>
-            <p className="noteDateAuthor">
-              Publicado por <span>usuario {user_id}</span>
-              {getTimeAgo(new Date(created_at))}
-            </p>
+            <p className="noteDateAuthor">Publicada el {created_at}</p>
           </footer>
         </>
       )}

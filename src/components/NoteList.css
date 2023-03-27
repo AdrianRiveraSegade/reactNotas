@@ -12,3 +12,8 @@ h3 {
   text-align: center;
   list-style: none;
 }
+
+li.lista {
+  border-bottom: 1px solid black;
+  margin-bottom: 2rem;
+}
