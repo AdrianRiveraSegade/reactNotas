@@ -4,6 +4,7 @@ import { useTokenContext } from "../context/TokenContext";
 import ErrorMessage from "../components/ErrorMessage";
 import useNoteById from "../hooks/useNoteByID";
 import { useNavigate } from "react-router-dom";
+import "./VerNotas.css";
 
 const VerNotas = () => {
   //Recogemos el id de los params de la url
@@ -52,7 +53,7 @@ const VerNotas = () => {
         />
       )}
 
-      <button onClick={() => deleteNote(id)}>Borrar nota WIP</button>
+      <button onClick={() => deleteNote(id)}>Borrar nota</button>
     </section>
   );
 };
