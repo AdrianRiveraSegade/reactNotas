@@ -24,7 +24,7 @@ export const Auth = () => {
       ) : (
         <>
           {/* FIXME Visualiza email de forma mas bonita y quitar Configuracion */}
-          {loggedUser && <li>{loggedUser.email}</li>}
+          {loggedUser && <li className="user">{loggedUser.email}</li>}
           <li>
             <button className="nuevaNota">
               <Link to={"/note"}>Crea una nueva nota</Link>
