@@ -44,8 +44,8 @@ const LoginForm = () => {
         //Cambiamos el estado y metemos el token recogido en la API
         login(body.data);
 
-        //Redireccionamos al usuario al inicio
-        navigate("/");
+        //Redireccionamos al usuario a la lista de notas
+        navigate("/list");
       }
     } catch (error) {
       console.error(error);

@@ -33,8 +33,8 @@ const RegisterForm = () => {
             throw new Error(body.message);
           }
 
-          //Devolvemos al usuario a la pagina principal
-          navigate("/");
+          //Devolvemos al usuario al listado de notas
+          navigate("/list");
         } catch (error) {
           //Si hay algún error lo sacamos por consola y lo mostramos como alerta al usuario
           console.error(error);

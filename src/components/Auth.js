@@ -40,9 +40,6 @@ export const Auth = () => {
           </li>
         </>
       )}
-      <button className="config">
-        <Link to={"/config"}>Configuracion</Link>
-      </button>
     </ul>
   );
 };
