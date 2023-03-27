@@ -15,10 +15,7 @@ const Note = ({ id, user_id, text, image, title, created_at }) => {
           <p>{text}</p>
 
           {image ? (
-            <img
-              src={`${process.env.REACT_APP_BACKEND}/${id.image}`}
-              alt={Note.text}
-            />
+            <img src={`${process.env.REACT_APP_BACKEND}/${image}`} alt={text} />
           ) : null}
 
           <footer>
