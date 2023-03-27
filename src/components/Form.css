@@ -17,5 +17,11 @@
 }
 
 label {
-  margin: 5px;
+  margin: 15px;
+  font-size: large;
+  color: rgb(40, 34, 34);
+}
+
+input {
+  border-radius: 5px;
 }
