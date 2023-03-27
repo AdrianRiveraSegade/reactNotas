@@ -20,7 +20,6 @@ function App() {
         <Route path="/register" element={<Registro />} />
         <Route path="/login" element={<Login />} />
         <Route path="/note" element={<NuevaNota />} />
-        <Route path="/config" element={<Config />} />
         <Route path="/list" element={<ListadoNotas />} />
         <Route path="/note/:id" element={<VerNotas />} />
         <Route path="*" element={<NotFoundPage />} />
