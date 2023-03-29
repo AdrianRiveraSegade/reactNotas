@@ -19,7 +19,7 @@ const Note = ({ id, user_id, text, image, title, created_at }) => {
           ) : null}
 
           <footer>
-            <p className="noteDateAuthor">Publicada el {created_at}</p>
+            {/* <p className="noteDateAuthor">Publicada el {created_at}</p> */}
           </footer>
         </>
       )}
